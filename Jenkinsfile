@@ -1,16 +1,10 @@
-pipeline{
+pipeline {
     agent any
     stages{
-        stage('init'){
+        stage('gitclone'){
             steps{
-                echo 'init'
+                gitclone 'https://github.com/murali90/maven-project.git'
             }
-        }
-        stage('Build'){
-            steps{
-                echo ('build')
-            }
-        
         }
     }
 }
